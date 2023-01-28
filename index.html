@@ -10,16 +10,30 @@
 </head>
 <body>
     <div class="home page">
-        <h1 style="font-size: 45px">Welcome to Simon Says by Mio Yanaka!</h1>
+        <h1>Welcome to Simon Says by Mio Yanaka!</h1>
         <div class="container fully-centered">
-            <button type="button" onclick="start()">Start a Game</button>
+            <button type="button" onclick="change_page('game')">Start a Game</button>
             <button type="button" onclick="redirect('https://www.youtube.com/watch?v=PK7zc28IGPc')">How to Play</button>
             <button type="button" onclick="redirect('https://github.com/MioDevelops')">More About the Dev</button>
         </div>
     </div>
 
     <div class="game page" style="display: none;">
-        
+        <h1 id="game_text">Press the button in the middle to start the game</h1>
+
+        <div class="gamepad fully-centered">
+            <!-- Colored Corners -->
+            <div class="simon_button" id="green" style="background-color: darkgreen;"></div>
+            <div class="simon_button" id="red" style="transform: scaleX(-1); left: 91%; background-color: rgb(77, 0, 0);"></div>
+            <div class="simon_button" id="orange" style="transform: scaleY(-1); top: 91%; background-color: darkorange;"></div>
+            <div class="simon_button" id="blue" style="transform: scaleX(-1) scaleY(-1); left: 91%; top: 91%; background-color: darkblue;"></div>
+            
+            <!-- Simon Pad -->
+            <div class="circle">
+                <button type="button" class="simon_start" onclick="start()"></button>
+                <p style="font-size: 45px; font-family: 'Cinzle', serif;">Simon!</p>
+            </div>
+        </div>
     </div>
 
     <script src="main.js"></script>

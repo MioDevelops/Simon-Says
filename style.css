@@ -21,7 +21,7 @@ body {
     align-items: center;
 }
 
-button {
+.container > button {
     width: 450px;
     height: 100px;
     margin: 20px;
@@ -43,5 +43,58 @@ button {
     position: absolute;
     transform: translate(-50%, -50%);
     left: 50%;
+    top: 55%;
+}
+
+h1 {
+    font-size: 45px
+}
+
+.gamepad {
+    width: 600px;
+    height: 600px;
+}
+
+.circle {
+    position: relative;
+    transform: translate(-50%, -50%);
     top: 50%;
+    left: 50%;
+
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: gray;
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+}
+
+.simon_button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    height: 250px;
+    width: 250px;
+    border-radius: 250px 0 0 0;
+    margin: -250px 0px 0px -250px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: black;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.simon_start {
+    position: relative;
+    transform: translate(-50%, -50%);
+    top: 10%;
+    left: 14.2%;
+    width: 60px;
+    height: 25px;
+
+    border-radius: 25px;
+    cursor: pointer;
+    background-color: rgb(56, 56, 56);
 }
